@@ -194,7 +194,7 @@ The cleaned dataset can be used for:
 
 ## 👩‍💻 Author
 
-**Nikitha Ashok**
+**Nikitha.S**
 
 B.Sc. Computer Science with Artificial Intelligence & Machine Learning
 
