@@ -148,6 +148,6 @@ jupyter notebook Data_Cleaning.ipynb
 
 ## 👩‍💻 Author
 
-**Nikitha Ashok**
+**Nikitha.S**
 
 Data Analytics Intern — Oasis Infobyte
