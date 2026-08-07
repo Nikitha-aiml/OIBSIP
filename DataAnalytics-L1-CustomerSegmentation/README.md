@@ -1,88 +1,49 @@
-# 👥 Customer Segmentation using K-Means Clustering
+# 👥 Customer Segmentation using RFM Analysis and K-Means Clustering
 
-> **Oasis Infobyte Data Analytics Internship – Level 1 | Task 2**
+## 📌 Project Overview
 
-## 📖 Project Overview
-
-Customer segmentation is the process of dividing customers into groups based on similar characteristics and purchasing behavior. In this project, the **K-Means Clustering** algorithm was used to identify distinct customer segments from mall customer data.
-
-The resulting clusters help businesses better understand their customers and create targeted marketing strategies.
+Customer segmentation is a data-driven approach used to group customers based on their purchasing behavior. In this project, customers are segmented using **RFM (Recency, Frequency, Monetary) Analysis** and **K-Means Clustering** to identify meaningful customer groups for targeted marketing strategies.
 
 ---
 
 ## 🎯 Objective
 
-The objective of this project is to segment customers into different groups based on their **Annual Income** and **Spending Score** using the K-Means clustering algorithm.
+- Analyze customer purchasing behavior.
+- Create RFM features (Recency, Frequency, Monetary).
+- Standardize the dataset for clustering.
+- Determine the optimal number of clusters using the Elbow Method.
+- Apply K-Means Clustering.
+- Visualize customer segments and interpret the results.
 
 ---
 
 ## 🛠️ Technologies Used
 
 - Python
+- Jupyter Notebook
 - Pandas
 - NumPy
 - Matplotlib
+- Seaborn
 - Scikit-learn
-- Jupyter Notebook
 
 ---
 
 ## 📂 Dataset
 
-**Dataset Name:** Mall Customer Segmentation Dataset
+**Dataset:** `Mall_Customers_Data.csv`
 
-The dataset contains customer information including:
+The dataset contains customer information such as:
 
 - Customer ID
+- Purchase Date
+- Product Category
+- Quantity Purchased
+- Total Purchase Amount
+- Payment Method
+- Customer Age
 - Gender
-- Age
-- Annual Income (k$)
-- Spending Score (1–100)
-
----
-
-## 🔍 Project Workflow
-
-### 1. Data Loading
-- Imported the dataset using Pandas
-- Displayed the first few records
-
-### 2. Data Exploration
-- Checked dataset shape
-- Verified data types
-- Examined summary statistics
-- Checked for missing values
-
-### 3. Feature Selection
-The following features were selected for clustering:
-
-- Annual Income (k$)
-- Spending Score (1–100)
-
-### 4. Finding the Optimal Number of Clusters
-
-The **Elbow Method** was used to determine the optimal number of clusters for the K-Means algorithm.
-
-### 5. Model Building
-
-Applied the **K-Means Clustering** algorithm to group customers based on similar spending behavior.
-
-### 6. Cluster Visualization
-
-Visualized the customer segments using a scatter plot with different colors representing each cluster.
-
----
-
-## 📊 Results
-
-The customers were successfully divided into meaningful clusters based on their income and spending behavior.
-
-These clusters can help businesses:
-
-- Identify high-value customers
-- Develop targeted marketing campaigns
-- Improve customer retention
-- Understand purchasing patterns
+- Churn Status
 
 ---
 
@@ -91,64 +52,101 @@ These clusters can help businesses:
 ```
 Task2_Customer_Segmentation/
 │
-├── Customer_Segmentation.ipynb
-├── Mall_Customers.csv
+├── OIBSIP_Task2_Customer_Segmentation.ipynb
+├── Mall_Customers_Data.csv
 ├── README.md
-└── screenshots/
-    ├── dataset_preview.png
-    ├── dataset_info.png
-    ├── missing_values.png
+└── Screenshots/
     ├── elbow_method.png
-    └── customer_segments.png
+    ├── cluster_visualization.png
+    ├── pairplot.png
+    └── ...
 ```
 
 ---
 
-## 📸 Project Screenshots
+## 📊 Workflow
 
-The `screenshots` folder contains:
+### Data Preprocessing
+- Imported dataset
+- Checked missing values
+- Removed duplicate records
+- Converted Purchase Date to datetime format
 
-- Dataset Preview
-- Dataset Information
-- Missing Value Check
-- Elbow Method Graph
-- Final Customer Segmentation Visualization
+### Feature Engineering
+Created RFM features:
+
+- **Recency:** Days since the customer's last purchase
+- **Frequency:** Number of purchases made
+- **Monetary:** Total spending by each customer
+
+### Feature Scaling
+- Standardized RFM values using StandardScaler
+
+### K-Means Clustering
+- Determined optimal clusters using the Elbow Method
+- Applied K-Means algorithm
+- Assigned customers to clusters
+
+### Data Visualization
+- Elbow Method Plot
+- Customer Cluster Scatter Plot
+- Pairwise Relationship Plots
 
 ---
 
-## 📈 Key Outcomes
+## 📈 Key Insights
 
-- Successfully explored and understood the dataset.
-- Selected appropriate features for clustering.
-- Determined the optimal number of clusters using the Elbow Method.
-- Applied K-Means clustering.
-- Visualized customer groups for business insights.
+- Customers were successfully grouped based on purchasing behavior.
+- High-value customers were identified through high frequency and monetary values.
+- Some customer groups showed low engagement and could benefit from promotional campaigns.
+- Customer segmentation enables businesses to design personalized marketing strategies.
 
 ---
 
-## 🎓 Learning Outcomes
+## 📌 Conclusion
 
-Through this project, I gained practical experience in:
+RFM Analysis combined with K-Means Clustering effectively segments customers into meaningful groups. These insights help businesses improve customer retention, optimize marketing campaigns, and enhance customer relationship management.
 
-- Data Preprocessing
-- Exploratory Data Analysis (EDA)
-- Feature Selection
-- Unsupervised Machine Learning
-- K-Means Clustering
+---
+
+## 📷 Screenshots
+
+Project visualizations are available in the **Screenshots** folder.
+
+Examples include:
+
 - Elbow Method
-- Cluster Visualization
-- Business Data Interpretation
+- Customer Segments
+- Pair Plot
+- Cluster Distribution
 
 ---
 
-## 🚀 Future Scope
+## 🚀 How to Run
 
-The customer segmentation model can be extended by:
+Clone the repository
 
-- Including additional customer features
-- Using Hierarchical Clustering or DBSCAN
-- Applying Principal Component Analysis (PCA)
-- Building personalized recommendation systems
+```bash
+git clone https://github.com/Nikitha-aiml/OIBSIP.git
+```
+
+Navigate to the project folder
+
+```bash
+cd Task2_Customer_Segmentation
+```
+
+Install dependencies
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn
+```
+
+Launch Jupyter Notebook
+
+```bash
+jupyter notebook OIBSIP_Task2_Customer_Segmentation.ipynb
+```
 
 ---
 
@@ -156,8 +154,4 @@ The customer segmentation model can be extended by:
 
 **Nikitha.S**
 
-B.Sc. Computer Science (Artificial Intelligence & Machine Learning)
-
-Data Analytics Intern – Oasis Infobyte
-
-GitHub: https://github.com/Nikitha-aiml
+Data Analytics Intern — Oasis Infobyte
