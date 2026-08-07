@@ -154,7 +154,7 @@ The customer segmentation model can be extended by:
 
 ## 👩‍💻 Author
 
-**Nikitha Ashok**
+**Nikitha.S**
 
 B.Sc. Computer Science (Artificial Intelligence & Machine Learning)
 
