@@ -6,7 +6,7 @@ Welcome to my **Oasis Infobyte Data Analytics Internship** repository. This repo
 
 ## 👩‍💻 About Me
 
-Hi! I'm **Nikitha Ashok**, a B.Sc. Computer Science student specializing in **Artificial Intelligence and Machine Learning**. I am passionate about Data Analytics, Machine Learning, and solving real-world problems using data.
+Hi! I'm **Nikitha.S**, a B.Sc. Computer Science student specializing in **Artificial Intelligence and Machine Learning**. I am passionate about Data Analytics, Machine Learning, and solving real-world problems using data.
 
 This repository reflects my learning journey and hands-on experience gained during the Oasis Infobyte Data Analytics Internship.
 
