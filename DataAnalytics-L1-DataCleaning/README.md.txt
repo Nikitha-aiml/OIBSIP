@@ -1,119 +1,38 @@
-# 🧹 Hotel Booking Data Cleaning
+# 🧹 Data Cleaning and Preprocessing
 
-> **Oasis Infobyte Data Analytics Internship – Level 1 | Task 3**
+## 📌 Project Overview
 
-## 📖 Project Overview
-
-The objective of this project is to clean and preprocess a real-world hotel booking dataset by identifying and resolving common data quality issues. The cleaned dataset is prepared for further analysis and machine learning applications.
+Data cleaning is a crucial step in the data analysis process. This project focuses on identifying and correcting inconsistencies, handling missing values, removing duplicates, and preparing raw data for reliable analysis and machine learning applications.
 
 ---
 
-## 🎯 Objectives
+## 🎯 Objective
 
-- Perform a data quality assessment
-- Handle missing values using appropriate techniques
-- Identify and remove duplicate records
-- Standardize text formatting
-- Detect outliers using the IQR method
-- Correct data types
-- Export the cleaned dataset
+- Import and inspect the dataset.
+- Identify missing values and inconsistent records.
+- Remove duplicate entries.
+- Handle incorrect data types.
+- Detect and treat outliers where necessary.
+- Prepare a clean dataset for further analysis.
 
 ---
 
 ## 🛠️ Technologies Used
 
 - Python
+- Jupyter Notebook
 - Pandas
 - NumPy
-- Jupyter Notebook
+- Matplotlib
+- Seaborn
 
 ---
 
 ## 📂 Dataset
 
-**Dataset Name:** Hotel Booking Demand Dataset
+**Dataset:** *(Replace with your dataset name)*
 
-**Original Dataset**
-- Rows: **119,390**
-- Columns: **32**
-
-The dataset contains hotel reservation information such as booking details, customer information, room types, pricing, cancellations, and reservation status.
-
----
-
-## 🔍 Data Cleaning Process
-
-### 1. Data Quality Assessment
-- Loaded the dataset
-- Examined dataset shape
-- Checked data types
-- Generated descriptive statistics
-- Identified missing values
-- Counted duplicate records
-
-### 2. Missing Value Handling
-
-| Column | Technique Used |
-|----------|----------------|
-| children | Median Imputation |
-| country | Mode Imputation |
-| agent | Replaced with 0 |
-| company | Replaced with 0 |
-
----
-
-### 3. Duplicate Removal
-
-- Detected duplicate rows
-- Removed duplicate records
-
-**Duplicate Rows Removed:** **31,994**
-
----
-
-### 4. Data Standardization
-
-- Removed unnecessary leading and trailing spaces from text columns
-- Ensured consistent formatting across categorical features
-
----
-
-### 5. Outlier Detection
-
-The **Interquartile Range (IQR)** method was used to identify outliers in numerical columns.
-
-The detected outliers were retained because they represent valid hotel booking scenarios such as premium room prices, long booking lead times, and large group reservations.
-
----
-
-### 6. Data Type Correction
-
-Converted the following column:
-
-| Column | Before | After |
-|---------|---------|-------|
-| reservation_status_date | object | datetime |
-
----
-
-### 7. Export
-
-The cleaned dataset was exported as:
-
-```
-cleaned_hotel_bookings.csv
-```
-
----
-
-## 📊 Data Cleaning Summary
-
-| Metric | Before Cleaning | After Cleaning |
-|---------|----------------:|---------------:|
-| Rows | 119390 | 87377 |
-| Columns | 32 | 32 |
-| Missing Values | 129425 | 0 |
-| Duplicate Rows | 31994 | 0 |
+The dataset contains customer-related information used for demonstrating data cleaning techniques.
 
 ---
 
@@ -123,81 +42,112 @@ cleaned_hotel_bookings.csv
 Task3_Data_Cleaning/
 │
 ├── Data_Cleaning.ipynb
-├── hotel_bookings.csv
-├── cleaned_hotel_bookings.csv
+├── dataset.csv
 ├── README.md
-└── screenshots/
-    ├── 1_dataset_preview.png
-    ├── 2_dataset_info.png
-    ├── 3_missing_values.png
-    ├── 4_duplicate_rows.png
-    ├── 5_outlier_detection.png
-    └── 6_before_after_summary.png
+└── Screenshots/
+    ├── missing_values.png
+    ├── duplicate_records.png
+    ├── cleaned_dataset.png
+    └── ...
 ```
 
 ---
 
-## 📸 Project Screenshots
+## 📊 Data Cleaning Process
 
-The `screenshots` folder contains images of:
+The following preprocessing steps were performed:
 
-- Dataset Preview
-- Dataset Information
-- Missing Values Report
-- Duplicate Row Detection
-- Outlier Detection using IQR
-- Before vs After Cleaning Summary
+### Data Inspection
 
----
+- Loaded the dataset
+- Examined dataset dimensions
+- Reviewed column names and data types
 
-## 📈 Results
+### Missing Value Treatment
 
-✔ Successfully handled missing values.
+- Identified missing values
+- Removed or filled missing records using appropriate methods
 
-✔ Removed duplicate records.
+### Duplicate Removal
 
-✔ Standardized categorical data.
+- Detected duplicate records
+- Removed duplicate entries
 
-✔ Converted date columns into the correct data type.
+### Data Type Conversion
 
-✔ Detected and documented outliers using the IQR method.
+- Converted columns into appropriate data types
 
-✔ Exported a clean, analysis-ready dataset.
+### Outlier Detection
 
----
+- Visualized numerical columns
+- Identified abnormal values using statistical methods
 
-## 🎓 Learning Outcomes
+### Data Validation
 
-Through this project, I gained practical experience in:
-
-- Data preprocessing
-- Missing value imputation
-- Duplicate detection and removal
-- Data standardization
-- Outlier detection using IQR
-- Data type conversion
-- Working with real-world datasets using Pandas
+- Verified dataset consistency
+- Confirmed successful preprocessing
 
 ---
 
-## 🚀 Future Scope
+## 📈 Key Outcomes
 
-The cleaned dataset can be used for:
+- Improved data quality by removing inconsistencies.
+- Eliminated duplicate records.
+- Handled missing values effectively.
+- Prepared a structured and reliable dataset for analysis.
+- Increased overall dataset accuracy and usability.
 
-- Exploratory Data Analysis (EDA)
-- Hotel booking trend analysis
-- Customer behavior analysis
-- Booking cancellation prediction
-- Machine Learning model development
+---
+
+## 📌 Conclusion
+
+Data cleaning significantly improves the quality and reliability of datasets. Proper preprocessing ensures that future analyses and machine learning models produce accurate and meaningful results.
+
+---
+
+## 📷 Screenshots
+
+Sample outputs and visualizations are available in the **Screenshots** folder.
+
+Examples include:
+
+- Missing Value Analysis
+- Duplicate Detection
+- Data Cleaning Results
+- Final Dataset Preview
+
+---
+
+## 🚀 How to Run
+
+Clone the repository
+
+```bash
+git clone https://github.com/Nikitha-aiml/OIBSIP.git
+```
+
+Navigate to the project folder
+
+```bash
+cd Task3_Data_Cleaning
+```
+
+Install required libraries
+
+```bash
+pip install pandas numpy matplotlib seaborn
+```
+
+Open the notebook
+
+```bash
+jupyter notebook Data_Cleaning.ipynb
+```
 
 ---
 
 ## 👩‍💻 Author
 
-**Nikitha.S**
+**Nikitha Ashok**
 
-B.Sc. Computer Science with Artificial Intelligence & Machine Learning
-
-Data Analytics Intern – Oasis Infobyte
-
-GitHub: https://github.com/Nikitha-aiml
+Data Analytics Intern — Oasis Infobyte
